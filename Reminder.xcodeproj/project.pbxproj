@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		60398D912A6730CA0032799D /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60398D902A6730CA0032799D /* Reminder.swift */; };
+		60398D942A6732E70032799D /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60398D932A6732E70032799D /* ReminderManager.swift */; };
+		60398D962A6734660032799D /* NotificationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60398D952A6734660032799D /* NotificationProvider.swift */; };
 		60D879932A66D1E5002C241B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D879922A66D1E5002C241B /* AppDelegate.swift */; };
 		60D879952A66D1E5002C241B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D879942A66D1E5002C241B /* SceneDelegate.swift */; };
 		60D8799A2A66D1E5002C241B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D879982A66D1E5002C241B /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		60398D902A6730CA0032799D /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		60398D932A6732E70032799D /* ReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
+		60398D952A6734660032799D /* NotificationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProvider.swift; sourceTree = "<group>"; };
 		60D8798F2A66D1E5002C241B /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D879922A66D1E5002C241B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D879942A66D1E5002C241B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		60398D922A6732DB0032799D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				60398D932A6732E70032799D /* ReminderManager.swift */,
+				60398D952A6734660032799D /* NotificationProvider.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		60D879862A66D1E5002C241B = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +83,7 @@
 		60D879912A66D1E5002C241B /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				60398D922A6732DB0032799D /* Manager */,
 				60398D8F2A6730C10032799D /* Model */,
 				60D879A72A66D2C2002C241B /* Scene */,
 				60D879A62A66D2B3002C241B /* Sources */,
@@ -214,9 +228,11 @@
 				60D879B52A66DA93002C241B /* AddReminderTableViewController.swift in Sources */,
 				60D879932A66D1E5002C241B /* AppDelegate.swift in Sources */,
 				60D879952A66D1E5002C241B /* SceneDelegate.swift in Sources */,
+				60398D942A6732E70032799D /* ReminderManager.swift in Sources */,
 				60398D912A6730CA0032799D /* Reminder.swift in Sources */,
 				60D879AA2A66D932002C241B /* ReminderTableViewController.swift in Sources */,
 				60D879AD2A66D945002C241B /* ReminderTableViewCell.swift in Sources */,
+				60398D962A6734660032799D /* NotificationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
