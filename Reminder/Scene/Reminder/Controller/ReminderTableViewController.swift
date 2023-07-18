@@ -80,4 +80,12 @@ extension ReminderTableViewController {
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
+    @IBAction func unwindFromAddReminder(_ segue: UIStoryboardSegue) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let newIndexPath = IndexPath(row: 0, section: 0)
+            self.tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
 }

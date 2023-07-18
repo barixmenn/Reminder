@@ -44,6 +44,16 @@ class AddReminderTableViewController: UITableViewController {
     
     //MARK: - Actions
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
+        var dueDate: Date?
+            
+            if reminderSwitch.isOn {
+                dueDate = reminderDatePicker.date
+            }
+            
+            let newReminder = Reminder(title: reminderTextField.text!, dueDate: dueDate)
+            
+            reminderManger.create(reminder: newReminder)
+            performSegue(withIdentifier: "unwindToReminders", sender: nil)
     }
     @IBAction func cancelButtonClicked(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
@@ -58,6 +68,8 @@ class AddReminderTableViewController: UITableViewController {
             
             updateCells()
     }
+    
+  
 }
 
 

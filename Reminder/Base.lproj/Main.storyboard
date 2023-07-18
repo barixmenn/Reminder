@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reminder Table View Controller-->
+        <!--Reminder-->
         <scene sceneID="aaW-64-tm6">
             <objects>
                 <tableViewController id="ess-1l-AHU" customClass="ReminderTableViewController" customModule="Reminder" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                             <outlet property="delegate" destination="ess-1l-AHU" id="QXp-A2-oiU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="CJS-cv-wnS">
+                    <navigationItem key="navigationItem" title="Reminder" id="CJS-cv-wnS">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="pHS-nF-bpp">
                             <connections>
                                 <segue destination="R3s-6o-lVL" kind="presentation" id="b2G-3e-qAJ"/>
@@ -173,17 +173,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Clock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1kO-jA-QN1">
-                                                    <rect key="frame" x="20" y="15" width="32" height="14.333333333333334"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1kO-jA-QN1">
+                                                    <rect key="frame" x="19.999999999999996" y="11.999999999999998" width="44.666666666666664" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="18 Jul 2023 15:30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xka-1c-dvw">
-                                                    <rect key="frame" x="272" y="15" width="101" height="14.333333333333334"/>
+                                                    <rect key="frame" x="237" y="11.999999999999998" width="136" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -239,9 +239,11 @@
                         <outlet property="reminderLabel" destination="Xka-1c-dvw" id="Sga-bg-su2"/>
                         <outlet property="reminderSwitch" destination="KQq-sf-4Hp" id="CXk-Cp-KVJ"/>
                         <outlet property="reminderTextField" destination="xsF-i5-tX9" id="uVY-8P-uUv"/>
+                        <segue destination="2Ge-WD-OMY" kind="unwind" identifier="unwindToReminders" unwindAction="unwindFromAddReminder:" id="yXp-Zv-hVH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdX-Ti-GBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2Ge-WD-OMY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2689.3129770992364" y="-164.08450704225353"/>
         </scene>
