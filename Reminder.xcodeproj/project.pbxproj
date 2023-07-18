@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		60D879932A66D1E5002C241B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D879922A66D1E5002C241B /* AppDelegate.swift */; };
 		60D879952A66D1E5002C241B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D879942A66D1E5002C241B /* SceneDelegate.swift */; };
-		60D879972A66D1E5002C241B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D879962A66D1E5002C241B /* ViewController.swift */; };
 		60D8799A2A66D1E5002C241B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D879982A66D1E5002C241B /* Main.storyboard */; };
 		60D8799C2A66D1E6002C241B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D8799B2A66D1E6002C241B /* Assets.xcassets */; };
 		60D8799F2A66D1E6002C241B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D8799D2A66D1E6002C241B /* LaunchScreen.storyboard */; };
+		60D879AA2A66D932002C241B /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D879A92A66D932002C241B /* ReminderTableViewController.swift */; };
+		60D879AD2A66D945002C241B /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D879AC2A66D945002C241B /* ReminderTableViewCell.swift */; };
+		60D879B52A66DA93002C241B /* AddReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D879B42A66DA93002C241B /* AddReminderTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		60D8798F2A66D1E5002C241B /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D879922A66D1E5002C241B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D879942A66D1E5002C241B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		60D879962A66D1E5002C241B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		60D879992A66D1E5002C241B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60D8799B2A66D1E6002C241B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D8799E2A66D1E6002C241B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D879A02A66D1E6002C241B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60D879A92A66D932002C241B /* ReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
+		60D879AC2A66D945002C241B /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		60D879B42A66DA93002C241B /* AddReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,73 @@
 		60D879912A66D1E5002C241B /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
-				60D879922A66D1E5002C241B /* AppDelegate.swift */,
-				60D879942A66D1E5002C241B /* SceneDelegate.swift */,
-				60D879962A66D1E5002C241B /* ViewController.swift */,
+				60D879A72A66D2C2002C241B /* Scene */,
+				60D879A62A66D2B3002C241B /* Sources */,
 				60D879982A66D1E5002C241B /* Main.storyboard */,
-				60D8799B2A66D1E6002C241B /* Assets.xcassets */,
 				60D8799D2A66D1E6002C241B /* LaunchScreen.storyboard */,
 				60D879A02A66D1E6002C241B /* Info.plist */,
 			);
 			path = Reminder;
+			sourceTree = "<group>";
+		};
+		60D879A62A66D2B3002C241B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				60D8799B2A66D1E6002C241B /* Assets.xcassets */,
+				60D879922A66D1E5002C241B /* AppDelegate.swift */,
+				60D879942A66D1E5002C241B /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		60D879A72A66D2C2002C241B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				60D879AE2A66DA47002C241B /* AddReminder */,
+				60D879A82A66D91B002C241B /* Reminder */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		60D879A82A66D91B002C241B /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				60D879B22A66DA6F002C241B /* Controller */,
+				60D879AB2A66D938002C241B /* View */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		60D879AB2A66D938002C241B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60D879AC2A66D945002C241B /* ReminderTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60D879AE2A66DA47002C241B /* AddReminder */ = {
+			isa = PBXGroup;
+			children = (
+				60D879B32A66DA77002C241B /* Controller */,
+			);
+			path = AddReminder;
+			sourceTree = "<group>";
+		};
+		60D879B22A66DA6F002C241B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60D879A92A66D932002C241B /* ReminderTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60D879B32A66DA77002C241B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60D879B42A66DA93002C241B /* AddReminderTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D879972A66D1E5002C241B /* ViewController.swift in Sources */,
+				60D879B52A66DA93002C241B /* AddReminderTableViewController.swift in Sources */,
 				60D879932A66D1E5002C241B /* AppDelegate.swift in Sources */,
 				60D879952A66D1E5002C241B /* SceneDelegate.swift in Sources */,
+				60D879AA2A66D932002C241B /* ReminderTableViewController.swift in Sources */,
+				60D879AD2A66D945002C241B /* ReminderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
