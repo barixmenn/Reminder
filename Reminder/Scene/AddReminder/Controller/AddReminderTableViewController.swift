@@ -19,6 +19,14 @@ class AddReminderTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
+    }
+    @IBAction func cancelButtonClicked(_ sender: UIBarButtonItem) {
+    }
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+    }
+    @IBAction func reminderSwitchChanged(_ sender: UISwitch) {
+    }
 }
 
 // MARK: - Table view data source

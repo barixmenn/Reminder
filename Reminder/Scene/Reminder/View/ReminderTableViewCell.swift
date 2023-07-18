@@ -14,4 +14,16 @@ class ReminderTableViewCell: UITableViewCell {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    // MARK: - Functions
+    func prepare(with reminder: Reminder) {
+        if let dueDate = reminder.dueDate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .short
+            dateFormatter.locale = Locale(identifier: "tr")
+            infoLabel.text = dateFormatter.string(from: dueDate)
+        } else {
+            infoLabel.text = nil
+        }
+    }
 }
