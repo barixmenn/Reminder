@@ -16,6 +16,9 @@ class ReminderTableViewCell: UITableViewCell {
     
     // MARK: - Functions
     func prepare(with reminder: Reminder) {
+        nameLabel.text = reminder.title
+        tagView.backgroundColor = reminder.isCompleted ? .orange : .lightGray
+        
         if let dueDate = reminder.dueDate {
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .medium
